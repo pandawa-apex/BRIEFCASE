@@ -1,0 +1,304 @@
+prompt --application/shared_components/data_profiles/budget_monitor_lines
+begin
+--   Manifest
+--     DATA PROFILE: Budget Monitor Lines
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.0'
+,p_default_workspace_id=>1475951226492231
+,p_default_application_id=>102
+,p_default_id_offset=>28679468460710035
+,p_default_owner=>'EXT'
+);
+wwv_flow_imp_shared.create_data_profile(
+ p_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'Budget Monitor Lines'
+,p_format=>'JSON'
+,p_has_header_row=>false
+,p_row_selector=>'items'
+,p_use_raw_json_selectors=>false
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31137703225445071)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'ID'
+,p_sequence=>1
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_has_time_zone=>false
+,p_selector=>'id'
+,p_remote_data_type=>'number'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31138021986445071)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'COA'
+,p_sequence=>2
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'coa'
+,p_remote_data_type=>'string'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31138289017445071)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'PRICE'
+,p_sequence=>3
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_has_time_zone=>false
+,p_selector=>'price'
+,p_remote_data_type=>'number'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31138597721445072)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'PERIOD'
+,p_sequence=>4
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'period'
+,p_remote_data_type=>'string'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31138875124445072)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'ACTIVITY'
+,p_sequence=>5
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'activity'
+,p_remote_data_type=>'string'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31139185501445072)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'LOCATION'
+,p_sequence=>6
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'location'
+,p_remote_data_type=>'string'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31139534726445072)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'HEADER_ID'
+,p_sequence=>7
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_has_time_zone=>false
+,p_selector=>'header_id'
+,p_remote_data_type=>'number'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31139799948445072)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'COMMITMENT'
+,p_sequence=>8
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'commitment'
+,p_remote_data_type=>'null'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31140115249445072)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'CREATED_BY'
+,p_sequence=>9
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'created_by'
+,p_remote_data_type=>'string'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31140463407445072)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'UPDATED_BY'
+,p_sequence=>10
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'updated_by'
+,p_remote_data_type=>'null'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31140671726445073)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'VERSION_NO'
+,p_sequence=>11
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_has_time_zone=>false
+,p_selector=>'version_no'
+,p_remote_data_type=>'number'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31140973050445073)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'COST_CENTER'
+,p_sequence=>12
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'cost_center'
+,p_remote_data_type=>'string'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31141340985445073)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'LINE_NUMBER'
+,p_sequence=>13
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_has_time_zone=>false
+,p_selector=>'line_number'
+,p_remote_data_type=>'number'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31141664807445073)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'LINE_SOURCE'
+,p_sequence=>14
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'line_source'
+,p_remote_data_type=>'string'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31141902959445073)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'COMPANY_NAME'
+,p_sequence=>15
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'company_name'
+,p_remote_data_type=>'string'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31142198276445073)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'CREATED_DATE'
+,p_sequence=>16
+,p_column_type=>'DATA'
+,p_data_type=>'TIMESTAMP WITH TIME ZONE'
+,p_format_mask=>'YYYY"-"MM"-"DD"T"HH24":"MI:SS.FF9TZR'
+,p_has_time_zone=>true
+,p_selector=>'created_date'
+,p_remote_data_type=>'string'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31142554964445074)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'FINAL_AMOUNT'
+,p_sequence=>17
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_has_time_zone=>false
+,p_selector=>'final_amount'
+,p_remote_data_type=>'number'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31142782581445074)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'REJECT_NOTES'
+,p_sequence=>18
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'reject_notes'
+,p_remote_data_type=>'null'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31143138179445074)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'UPDATED_DATE'
+,p_sequence=>19
+,p_column_type=>'DATA'
+,p_data_type=>'TIMESTAMP WITH TIME ZONE'
+,p_format_mask=>'YYYY"-"MM"-"DD"T"HH24":"MI:SS.FF9TZR'
+,p_has_time_zone=>true
+,p_selector=>'updated_date'
+,p_remote_data_type=>'null'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31143451220445074)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'ACTUAL_AMOUNT'
+,p_sequence=>20
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'actual_amount'
+,p_remote_data_type=>'null'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31143744885445074)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'FUND_AVAILABLE'
+,p_sequence=>21
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_has_time_zone=>false
+,p_selector=>'fund_available'
+,p_remote_data_type=>'number'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31144059721445074)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'BUDGET_CATEGORY'
+,p_sequence=>22
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'budget_category'
+,p_remote_data_type=>'string'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(31144312383445075)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'ORIGINAL_AMOUNT'
+,p_sequence=>23
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_has_time_zone=>false
+,p_selector=>'original_amount'
+,p_remote_data_type=>'number'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(30570492613831102)
+,p_data_profile_id=>wwv_flow_imp.id(31137495744445070)
+,p_name=>'PRODUCT'
+,p_sequence=>24
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4000
+,p_has_time_zone=>false
+,p_selector=>'product'
+,p_remote_data_type=>'string'
+);
+wwv_flow_imp.component_end;
+end;
+/
