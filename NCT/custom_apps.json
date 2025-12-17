@@ -1,0 +1,15 @@
+{
+    "customApps": [
+        {
+            "internalName": "BRIEFCASE Extension - NCT",
+            "name": "BRIEFCASE EXTENSION",
+            "description": "BRIEFCASE Extension Application from Pandawa Repository. A comprehensive project budget and forecasting for NCT.",
+            "author": "PANDAWA",
+            "version": "1.0.0",
+            "icon": "",
+            "url": "https://github.com/pandawa-apex/BRIEFCASE/tree/main/NCT/BRIEFCASE%20Extension%20-%20NCT/NCT",
+            "source": "https://raw.githubusercontent.com/pandawa-apex/BRIEFCASE/main/NCT/BRIEFCASE%20Extension%20-%20NCT/NCT.sql",
+            "zip": "https://raw.githubusercontent.com/pandawa-apex/BRIEFCASE/main/NCT/BRIEFCASE%20Extension%20-%20NCT/NCT.zip"
+        }
+    ]
+}
