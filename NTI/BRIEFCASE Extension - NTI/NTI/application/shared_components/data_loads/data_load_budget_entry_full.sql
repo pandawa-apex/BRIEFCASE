@@ -1,0 +1,362 @@
+prompt --application/shared_components/data_loads/data_load_budget_entry_full
+begin
+--   Manifest
+--     DATA LOAD: Data Load Budget Entry Full
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.0'
+,p_default_workspace_id=>1466964046809863
+,p_default_application_id=>101
+,p_default_id_offset=>18923207992089920
+,p_default_owner=>'XTD'
+);
+wwv_flow_imp_shared.create_data_profile(
+ p_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'Data Load Budget Entry Full'
+,p_format=>'XLSX'
+,p_encoding=>'utf-8'
+,p_default_xlsx_sheet_name=>'sheet1.xml'
+,p_has_header_row=>true
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762883068368068366)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'HDR_ID'
+,p_sequence=>1
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_selector_type=>'NAME'
+,p_selector=>'HDR_ID'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762883324972068369)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'BATCH_NO'
+,p_sequence=>2
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'BATCH_NO'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762883671450068369)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'VERSION_NO'
+,p_sequence=>3
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_selector_type=>'NAME'
+,p_selector=>'VERSION_NO'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762883923272068370)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'COMPANY_NAME'
+,p_sequence=>4
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'COMPANY_NAME'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762884213257068370)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'YEAR'
+,p_sequence=>5
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>4
+,p_selector_type=>'NAME'
+,p_selector=>'YEAR'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762884564070068370)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'DEPT_NAME'
+,p_sequence=>6
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'DEPT_NAME'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762884814400068370)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'BUDGET_TYPE'
+,p_sequence=>7
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'BUDGET_TYPE'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762885185452068370)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'AMOUNT_TYPE'
+,p_sequence=>8
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'AMOUNT_TYPE'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762885425440068371)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'STATUS'
+,p_sequence=>9
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>50
+,p_selector_type=>'NAME'
+,p_selector=>'STATUS'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762885777701068371)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'FILE_NAME'
+,p_sequence=>10
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'FILE_NAME'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762886077667068371)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'REJECT_NOTES'
+,p_sequence=>11
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>512
+,p_selector_type=>'NAME'
+,p_selector=>'REJECT_NOTES'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762886331982068371)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'HDR_CREATED_DATE'
+,p_sequence=>12
+,p_column_type=>'DATA'
+,p_data_type=>'DATE'
+,p_format_mask=>'YYYY"-"MM"-"DD'
+,p_has_time_zone=>false
+,p_selector_type=>'NAME'
+,p_selector=>'HDR_CREATED_DATE'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762886638520068371)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'HDR_CREATED_BY'
+,p_sequence=>13
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'HDR_CREATED_BY'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762886952758068372)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'HDR_UPDATED_DATE'
+,p_sequence=>14
+,p_column_type=>'DATA'
+,p_data_type=>'DATE'
+,p_format_mask=>'YYYY"-"MM"-"DD'
+,p_has_time_zone=>false
+,p_selector_type=>'NAME'
+,p_selector=>'HDR_UPDATED_DATE'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762887224467068372)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'HDR_UPDATED_BY'
+,p_sequence=>15
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'HDR_UPDATED_BY'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762887514533068372)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'LEDGER_ID'
+,p_sequence=>16
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_selector_type=>'NAME'
+,p_selector=>'LEDGER_ID'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762887875884068372)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'CHART_OF_ACCOUNTS_ID'
+,p_sequence=>17
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_selector_type=>'NAME'
+,p_selector=>'CHART_OF_ACCOUNTS_ID'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762888127999068372)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'SEGMENT_ACCOUNT'
+,p_sequence=>18
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'SEGMENT_ACCOUNT'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762888468478068373)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'HDR_COST_CENTER'
+,p_sequence=>19
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>25
+,p_selector_type=>'NAME'
+,p_selector=>'HDR_COST_CENTER'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762888731978068373)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'SHORT_NAME'
+,p_sequence=>20
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>20
+,p_selector_type=>'NAME'
+,p_selector=>'SHORT_NAME'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762889002932068373)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'BUDGET_COMPILE_ID'
+,p_sequence=>21
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_selector_type=>'NAME'
+,p_selector=>'BUDGET_COMPILE_ID'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762889322323068373)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'SOURCE'
+,p_sequence=>22
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'SOURCE'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762889608133068373)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'LNS_ID'
+,p_sequence=>23
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_selector_type=>'NAME'
+,p_selector=>'LNS_ID'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762889942654068374)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'HEADER_ID'
+,p_sequence=>24
+,p_column_type=>'DATA'
+,p_data_type=>'NUMBER'
+,p_selector_type=>'NAME'
+,p_selector=>'HEADER_ID'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762890215682068374)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'BUDGET_CATEGORY'
+,p_sequence=>25
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'BUDGET_CATEGORY'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762890551526068374)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'ACTIVITY'
+,p_sequence=>26
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'ACTIVITY'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762890876586068374)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'COA'
+,p_sequence=>27
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'COA'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762891105057068374)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'COA_DESC'
+,p_sequence=>28
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>2000
+,p_selector_type=>'NAME'
+,p_selector=>'COA_DESC'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762891491519068374)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'LOCATION'
+,p_sequence=>29
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'LOCATION'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(762891794529068375)
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_name=>'PRODUCT'
+,p_sequence=>30
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>255
+,p_selector_type=>'NAME'
+,p_selector=>'PRODUCT'
+);
+wwv_flow_imp_shared.create_load_table(
+ p_id=>wwv_flow_imp.id(762891961224068375)
+,p_name=>'Data Load Budget Entry Full'
+,p_static_id=>'data_load_budget_entry_full'
+,p_target_type=>'TABLE'
+,p_table_name=>'APX_BUDGET_ENTRY_FULL_TBL'
+,p_data_profile_id=>wwv_flow_imp.id(762882776303068271)
+,p_loading_method=>'APPEND'
+,p_commit_interval=>200
+,p_error_handling=>'ABORT'
+,p_skip_validation=>'N'
+,p_version_scn=>6076181962224
+);
+wwv_flow_imp.component_end;
+end;
+/
