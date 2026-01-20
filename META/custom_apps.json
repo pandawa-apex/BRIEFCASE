@@ -1,0 +1,15 @@
+{
+    "customApps": [
+        {
+            "internalName": "BRIEFCASE Extension - META",
+            "name": "BRIEFCASE EXTENSION",
+            "description": "BRIEFCASE Extension Application from Pandawa Repository. A comprehensive project budget and forecasting for META.",
+            "author": "PANDAWA",
+            "version": "1.0.0",
+            "icon": "",
+            "url": "https://github.com/pandawa-apex/BRIEFCASE/tree/main/META/BRIEFCASE%20Extension%20-%20META/META",
+            "source": "https://raw.githubusercontent.com/pandawa-apex/BRIEFCASE/main/META/BRIEFCASE%20Extension%20-%20META/META.sql",
+            "zip": "https://raw.githubusercontent.com/pandawa-apex/BRIEFCASE/main/META/BRIEFCASE%20Extension%20-%20META/META.zip"
+        }
+    ]
+}

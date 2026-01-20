@@ -1,0 +1,15 @@
+{
+    "customApps": [
+        {
+            "internalName": "BRIEFCASE Extension - NSTI",
+            "name": "BRIEFCASE EXTENSION",
+            "description": "BRIEFCASE Extension Application from Pandawa Repository. A comprehensive budget and forecasting project for NTI.",
+            "author": "PANDAWA",
+            "version": "1.0.0",
+            "icon": "",
+            "url": "https://github.com/pandawa-apex/BRIEFCASE/tree/main/NSTI/BRIEFCASE%20Extension%20-%20NSTI/NSTI",
+            "source": "https://raw.githubusercontent.com/pandawa-apex/BRIEFCASE/main/NSTI/BRIEFCASE%20Extension%20-%20NSTI/NSTI.sql",
+            "zip": "https://raw.githubusercontent.com/pandawa-apex/BRIEFCASE/main/NSTI/BRIEFCASE%20Extension%20-%20NSTI/NSTI.zip"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "customApps": [
+        {
+            "internalName": "BRIEFCASE Extension - ATI",
+            "name": "BRIEFCASE EXTENSION",
+            "description": "BRIEFCASE Extension Application from Pandawa Repository. A comprehensive budget and forecasting project for ATI.",
+            "author": "PANDAWA",
+            "version": "1.0.0",
+            "icon": "",
+            "url": "https://github.com/pandawa-apex/BRIEFCASE/tree/main/ATI/BRIEFCASE%20Extension%20-%20ATI/ATI",
+            "source": "https://raw.githubusercontent.com/pandawa-apex/BRIEFCASE/main/ATI/BRIEFCASE%20Extension%20-%20ATI/ATI.sql",
+            "zip": "https://raw.githubusercontent.com/pandawa-apex/BRIEFCASE/main/ATI/BRIEFCASE%20Extension%20-%20ATI/ATI.zip"
+        }
+    ]
+}

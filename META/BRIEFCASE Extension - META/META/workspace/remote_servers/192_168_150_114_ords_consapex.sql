@@ -1,0 +1,28 @@
+prompt --workspace/remote_servers/192_168_150_114_ords_consapex
+begin
+--   Manifest
+--     REMOTE SERVER: 192-168-150-114-ords-consapex
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2023.10.31'
+,p_release=>'23.2.5'
+,p_default_workspace_id=>1389747021320061
+,p_default_application_id=>107
+,p_default_id_offset=>776066518237927778
+,p_default_owner=>'EXT'
+);
+wwv_imp_workspace.create_remote_server(
+ p_id=>wwv_flow_imp.id(1371589583372695304)
+,p_name=>'192-168-150-114-ords-consapex'
+,p_static_id=>'192_168_150_114_ords_consapex'
+,p_base_url=>nvl(wwv_flow_application_install.get_remote_server_base_url('192_168_150_114_ords_consapex'),'http://192.168.150.114:8080/ords/consapex/')
+,p_https_host=>nvl(wwv_flow_application_install.get_remote_server_https_host('192_168_150_114_ords_consapex'),'')
+,p_server_type=>'WEB_SERVICE'
+,p_ords_timezone=>nvl(wwv_flow_application_install.get_remote_server_ords_tz('192_168_150_114_ords_consapex'),'')
+,p_remote_sql_default_schema=>nvl(wwv_flow_application_install.get_remote_server_default_db('192_168_150_114_ords_consapex'),'')
+,p_mysql_sql_modes=>nvl(wwv_flow_application_install.get_remote_server_sql_mode('192_168_150_114_ords_consapex'),'')
+,p_prompt_on_install=>false
+);
+wwv_flow_imp.component_end;
+end;
+/
